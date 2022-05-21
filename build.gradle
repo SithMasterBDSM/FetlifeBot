@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.diffplug.spotless' version '6.3.0'
+    id 'io.freefair.lombok' version '6.4.1'
+}
+
+group 'co.cubestudio'
+version '0.666'
+mainClassName = 'sithmaster.FetlifeBotSeleniumApp'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.seleniumhq.selenium:selenium-chrome-driver:3.141.59")
+    implementation("org.seleniumhq.selenium:selenium-server:3.141.59")
+    implementation("org.mongodb:mongo-java-driver:3.12.11")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+    compileOnly("org.projectlombok:lombok:1.18.24")
+}
